@@ -62,6 +62,12 @@ const { createApp } = Vue
                 return 'active';
             }
             return "";
+        },
+        autoPlay(){
+            setInterval(this.nextElement,2000);
         }
+    },
+    mounted(){
+        this.autoPlay();
     }
   }).mount('#app')
