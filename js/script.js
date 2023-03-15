@@ -53,6 +53,15 @@ const { createApp } = Vue
             if(this.activeElement == this.slides.length){
                 this.activeElement = 0;
             }
+        },
+        selectImage(newActiveElement){
+            this.activeElement = newActiveElement;
+        },
+        activeClassOn(index){
+            if(index == this.activeElement){
+                return 'active';
+            }
+            return "";
         }
     }
   }).mount('#app')
